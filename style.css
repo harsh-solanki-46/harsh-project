@@ -1,0 +1,602 @@
+@import url('https://fontawesome.com/search?o=r&m=free:width@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan', sans-serif;
+
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    font-weight: 700px;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+.login{
+    border: none;
+    background: #04a4c8;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+
+.login:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+
+.normal1{ /*Repair Service button Explore more*/
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 25px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.normal2{ /*newsletter buttn Sign up*/
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 25px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+body {
+    width: 100%;
+}
+
+
+/*from header start*/
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 35px; /*logo line size*/
+    background: #e3e6f3; /*Horizontal line colur (aadi line)*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999; /*box shadow*/
+    position: sticky;
+    top: 0;
+    left: 50%;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 25px; /*remove dote,horizontal line spaces*/
+    position: relative;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a; /* this is colur of home,shop,blog,about,contact*/
+    transition: 0.3s ease; /*after 3sec home,shop,blog,about,contact on black*/
+}
+
+#navbar li a:hover,/*without","no activet heighlited*/
+#navbar li a.active { /*highlited home button html line 15*/
+    color: #088178; /*home,shop,blog,about,contact tap colur changer */
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{ /*add underline on Home to contact*/
+    content: "";
+    width: 40px; /*Home underline*/
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*here login*/
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none; /*to remove close button on ipad Air*/
+}
+
+
+#hero{ /*add fonts*/
+    background-image: url(img/hero4.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 5% right 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;/*center text*/
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h4{
+    padding-bottom: 50px;
+}
+#hero h1{
+    color: #088178; /*h1 change colur*/
+}
+#hero button{
+    background-image: url(img/button.png);
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#feature .fe-box{
+    width: 140px;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #696c69;
+    border-radius: 5%; /*round shap*/
+    margin: 2px 0;
+
+}
+
+#feature{  /*boxes on horizontal*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(27, 20, 169, 0.414); /*free shiping box shadow*/
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6{ /*free shiping colur*/
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2) h6{
+    background-color: #add2ad;
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color: #8bdfa0;
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: #ebbbba;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: #98bbec;
+}
+#feature .fe-box:nth-child(6) h6{
+    background-color: #add2ad;
+}
+
+#product1{ /*feature product and summer collection on middle*/
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 230px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+
+#product1 .pro .des h5{
+    padding: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .bag {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #0fd72a;
+    position: absolute; /*absolute position  inside child aliment*/
+    bottom: 20px; /*fix cart vertical line (-760px)*/
+    right: 10px;  /*fix cart on horizontal line (810px)*/
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/banner/b2.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4{
+    color: #fff; /*repair service colur*/
+    font-size: 16px;
+
+}
+
+#banner h2{
+    color: #fff; /*Up to 70% Off - All clothes & Accessories colur*/
+    font-size: 30px;
+    padding: 10px 0;
+
+}
+
+#banner h2 span{
+    color: #e00f0f; /*70% Off*/
+}
+
+#banner button:hover{ /*Explore More button green when cursur tauch button*/
+    transform: scale(1.1);
+    background-color: #088178;
+    color: #fff;
+}
+#sm-banner{ /*Buy 1 Get 1 Free banner half size*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{ /*same as #banner the line is 268*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(img/banner/b17.jpg);
+    min-width: 475px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px; /*shape of border*/
+    padding: 20px;
+}
+
+#sm-banner .banner-box2{
+    background-image: url(img/banner/b10.jpg);
+}
+
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2{
+    color: #171616;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#sm-banner span{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    background: #088178;
+    border: 1px solid #0b16bc;
+}
+
+#banner-3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 90px;
+}
+
+#banner-3 .banner-box{ /*same as #banner the line is 268*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-image: url(img/banner/b7.jpg);
+    width: 300px;
+    height: 30vh;
+    background-size: cover;
+    /*background-position: center;*/
+    border-radius: 10px; /*shape of border*/
+    padding: 20px;
+   /* margin :20px;*/ 
+   margin-bottom :30px; 
+}
+
+#banner-3 .banner-box2{
+    background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.7)) ,
+    url(img/banner/b18.jpg); /*image left/right side dark*/
+}
+#banner-3 .banner-box3{
+    background-image: url(img/banner/b4.jpg);
+}
+
+#banner-3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner-3 h5{
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(img/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #808ea0;
+}
+
+#newsletter p span{ /*diffent colur for our perticuler text*/
+    color: #ffbd27
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px; 
+    outline: none; /*if you want border line*/
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+#newsletter button{
+    background-color: #64850f;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{ /*logo size add from html line no:12*/
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin: 20px;
+}
+
+footer .follow{ /*follow us */
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img{ /*both class line no:422,line no:426*/
+    border: 2px solid;
+    color: #088178; /*From App store and Google play image border*/
+    border-radius: 15px;
+}
+
+footer .install img{ /*Install app:space from top and bottom left right*/
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #11efcd;
+}   
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+    
+
+/*Home page*/
+
+/*Shop page*/
+
+/*Single product*/
+
+/*blog page*/
+
+/*About pages*/
+
+/*cart page*/
+
+/*start media query*/
+
+@media (max-width:799px) { /*ipad mini*/
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        position: fixed;
+        top: 0;
+        right: -300px; /*0*/
+        height: 603px; /*well default 100px*/
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 70px rgb(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+    }
+    #navbar li{
+        margin: 6px;
+    }
+}
